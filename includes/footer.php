@@ -9,9 +9,9 @@ if (!isset($site_settings) && $pdo) {
     }
 }
 $site_name = !empty($site_settings['site_name']) ? $site_settings['site_name'] : 'Awais Qarni';
-$fb_link = !empty($site_settings['facebook']) ? $site_settings['facebook'] : '#';
+$fb_link = !empty($site_settings['facebook']) ? $site_settings['facebook'] : 'https://www.facebook.com/ch.awais.508218';
 $li_link = !empty($site_settings['linkedin']) ? $site_settings['linkedin'] : 'https://www.linkedin.com/in/choudhary-awais/';
-$gh_link = !empty($site_settings['github']) ? $site_settings['github'] : '#';
+$gh_link = !empty($site_settings['github']) ? $site_settings['github'] : 'https://github.com/choudharyawaisdev';
 ?>
     </main>
     <!-- Main Content Area Ends -->

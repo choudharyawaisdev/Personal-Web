@@ -71,10 +71,12 @@ require_once 'includes/header.php';
             
             <!-- Author Card -->
             <div class="mt-16 pt-8 border-t border-neutral-900/80 flex items-center gap-4">
-                <?php if (file_exists('assets/images/Awais no.jpg')): ?>
+                <?php if (file_exists('assets/images/image.jpeg')): ?>
+                    <img src="assets/images/image.jpeg" alt="Awais Qarni Profile" class="w-12 h-12 rounded-full object-cover border border-neutral-800">
+                <?php elseif (file_exists('assets/images/image.jpg')): ?>
+                    <img src="assets/images/image.jpg" alt="Awais Qarni Profile" class="w-12 h-12 rounded-full object-cover border border-neutral-800">
+                <?php elseif (file_exists('assets/images/Awais no.jpg')): ?>
                     <img src="assets/images/Awais no.jpg" alt="Awais Qarni Profile" class="w-12 h-12 rounded-full object-cover border border-neutral-800">
-                <?php elseif (file_exists('Awais no.jpg')): ?>
-                    <img src="Awais no.jpg" alt="Awais Qarni Profile" class="w-12 h-12 rounded-full object-cover border border-neutral-800">
                 <?php else: ?>
                     <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent">
                         <i class="fa-solid fa-code"></i>

@@ -95,9 +95,9 @@ if (isset($_POST['install'])) {
             $insert_settings->execute([
                 'Awais Qarni | Portfolio',
                 'chawaisdev92@gmail.com',
-                'https://facebook.com/chawaisdev',
+                'https://www.facebook.com/ch.awais.508218',
                 'https://www.linkedin.com/in/choudhary-awais/',
-                'https://github.com/chawaisdev',
+                'https://github.com/choudharyawaisdev',
                 '<h2>Terms & Services</h2><p>Welcome to our portfolio. By accessing this website, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p><p>We reserve the right to revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>'
             ]);
         }

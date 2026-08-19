@@ -57,10 +57,12 @@ if ($pdo) {
             <div class="col-lg-5 order-1 order-lg-2 flex justify-center">
                 <div class="relative w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] rounded-3xl overflow-hidden glass-card p-3 flex items-center justify-center">
                     <div class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent"></div>
-                    <?php if (file_exists('assets/images/Awais no.jpg')): ?>
-                        <img src="assets/images/Awais no.jpg" alt="Awais Qarni Profile" class="w-full h-full object-cover rounded-2xl filter grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
-                    <?php elseif (file_exists('Awais no.jpg')): ?>
-                        <img src="Awais no.jpg" alt="Awais Qarni Profile" class="w-full h-full object-cover rounded-2xl filter grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
+                    <?php if (file_exists('assets/images/image.jpeg')): ?>
+                        <img src="assets/images/image.jpeg" alt="Awais Qarni Profile" class="w-full h-full object-cover rounded-2xl filter contrast-105 hover:scale-105 transition-all duration-500">
+                    <?php elseif (file_exists('assets/images/image.jpg')): ?>
+                        <img src="assets/images/image.jpg" alt="Awais Qarni Profile" class="w-full h-full object-cover rounded-2xl filter contrast-105 hover:scale-105 transition-all duration-500">
+                    <?php elseif (file_exists('assets/images/Awais no.jpg')): ?>
+                        <img src="assets/images/Awais no.jpg" alt="Awais Qarni Profile" class="w-full h-full object-cover rounded-2xl filter contrast-105 hover:scale-105 transition-all duration-500">
                     <?php else: ?>
                         <div class="w-full h-full bg-neutral-900 rounded-2xl flex items-center justify-center">
                             <i class="fa-solid fa-code text-7xl text-neutral-800"></i>
