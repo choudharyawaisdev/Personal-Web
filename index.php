@@ -1,5 +1,6 @@
 <?php
-$page_title = "Awais Qarni - Full Stack Developer | PHP | Laravel | React | AI Automation";
+$page_title = "PHP & Laravel Developer | Awais Qarni";
+$meta_desc = "I build secure, scalable and high-performance web applications using PHP, Laravel, MySQL and WordPress. Full-Stack PHP & Laravel Developer.";
 $active_page = 'home';
 require_once 'includes/header.php';
 
@@ -30,24 +31,24 @@ if ($pdo) {
                     Available for Freelance & Remote Work
                 </div>
                 
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4 leading-tight font-outfit">
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-3 leading-tight font-outfit">
                     Hi, I am <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-100 to-accent">Awais Qarni</span>
                 </h1>
                 
-                <h2 class="text-xl sm:text-2xl text-neutral-400 font-medium mb-6 font-inter">
-                    Full Stack Developer | PHP | Laravel | React | AI Automation
+                <h2 class="text-2xl sm:text-3xl text-accent font-bold mb-5 font-outfit">
+                    PHP & Laravel Developer
                 </h2>
                 
-                <p class="text-neutral-400 text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
-                    I design and engineer premium, high-performance web applications, automate enterprise workflows with AI integrations, and develop robust database systems.
+                <p class="text-neutral-300 text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
+                    I build secure, scalable and high-performance web applications using PHP, Laravel, MySQL and WordPress.
                 </p>
                 
                 <div class="flex flex-wrap items-center justify-center justify-content-lg-start gap-4">
                     <a href="portfolio.php" class="px-6 py-3.5 rounded-xl text-sm font-semibold text-white btn-glow no-underline">
-                        View Portfolio <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        View My Work <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
                     <a href="contact.php" class="px-6 py-3.5 rounded-xl text-sm font-semibold btn-outline-custom no-underline">
-                        Contact Me
+                        Hire Me
                     </a>
                 </div>
             </div>
@@ -62,7 +63,7 @@ if ($pdo) {
                         <img src="Awais no.jpg" alt="Awais Qarni Profile" class="w-full h-full object-cover rounded-2xl filter grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
                     <?php else: ?>
                         <div class="w-full h-full bg-neutral-900 rounded-2xl flex items-center justify-center">
-                            <i class="fa-solid fa-user-ninja text-7xl text-neutral-800"></i>
+                            <i class="fa-solid fa-code text-7xl text-neutral-800"></i>
                         </div>
                     <?php endif; ?>
                     <!-- Glass badge -->
@@ -71,8 +72,8 @@ if ($pdo) {
                             <i class="fa-solid fa-code text-lg"></i>
                         </div>
                         <div>
-                            <p class="text-xs text-neutral-400 m-0">Experience</p>
-                            <p class="text-sm font-bold text-white m-0">5+ Years Developing</p>
+                            <p class="text-xs text-neutral-400 m-0">Specialization</p>
+                            <p class="text-sm font-bold text-white m-0">PHP & Laravel Specialist</p>
                         </div>
                     </div>
                 </div>
@@ -81,126 +82,137 @@ if ($pdo) {
     </div>
 </section>
 
-<!-- Skills Preview Section -->
-<section class="py-20 bg-[#08080C]/50 relative border-t border-b border-neutral-900/60">
+<!-- Technologies Section -->
+<section id="technologies" class="py-20 bg-[#08080C]/50 relative border-t border-b border-neutral-900/60">
     <div class="container mx-auto px-4 md:px-8">
         <div class="text-center mb-16 fade-in-scroll">
-            <h2 class="text-3xl sm:text-4xl font-bold font-outfit mb-3">Technical Superpowers</h2>
-            <p class="text-neutral-400 max-w-lg mx-auto text-sm sm:text-base">A curated set of technologies I use to build robust and responsive applications.</p>
+            <div class="inline-block text-accent text-xs font-bold tracking-widest uppercase mb-2">Core Tech Stack</div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-outfit mb-3">Technologies</h2>
+            <p class="text-neutral-400 max-w-lg mx-auto text-sm sm:text-base">Specialized in robust backend engineering, frameworks, database architecture, and CMS solutions.</p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <?php 
-            $skills = [
-                ['name' => 'PHP & Laravel', 'icon' => 'fa-brands fa-laravel', 'color' => 'text-red-500'],
-                ['name' => 'SQL Databases', 'icon' => 'fa-solid fa-database', 'color' => 'text-emerald-400'],
-                ['name' => 'React JS & JS', 'icon' => 'fa-brands fa-react', 'color' => 'text-sky-400'],
-                ['name' => 'AI Automation', 'icon' => 'fa-solid fa-robot', 'color' => 'text-accent'],
-                ['name' => 'WordPress CMS', 'icon' => 'fa-brands fa-wordpress', 'color' => 'text-blue-400'],
-                ['name' => 'HTML & CSS', 'icon' => 'fa-brands fa-bootstrap', 'color' => 'text-purple-500'],
-            ];
-            foreach ($skills as $s):
-            ?>
-            <div class="glass-card p-6 flex flex-col items-center justify-center text-center fade-in-scroll">
-                <div class="w-12 h-12 rounded-xl bg-neutral-900/80 border border-neutral-800 flex items-center justify-center mb-4 transition duration-300">
-                    <i class="<?php echo $s['icon']; ?> text-2xl <?php echo $s['color']; ?>"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- PHP Card -->
+            <div class="glass-card p-6 flex flex-col justify-between fade-in-scroll border-t-2 border-t-indigo-500/60">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-5 text-indigo-400">
+                        <i class="fa-brands fa-php text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-outfit mb-2">PHP</h3>
+                    <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
+                        Core PHP, OOP, MVC, secure backend development and database-driven applications.
+                    </p>
                 </div>
-                <h3 class="text-sm sm:text-base font-semibold text-white font-outfit"><?php echo $s['name']; ?></h3>
             </div>
-            <?php endforeach; ?>
+
+            <!-- Laravel Card -->
+            <div class="glass-card p-6 flex flex-col justify-between fade-in-scroll border-t-2 border-t-red-500/60">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-5 text-red-500">
+                        <i class="fa-brands fa-laravel text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-outfit mb-2">Laravel</h3>
+                    <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
+                        Laravel MVC, Eloquent ORM, migrations, authentication, REST APIs, queues, middleware and custom applications.
+                    </p>
+                </div>
+            </div>
+
+            <!-- MySQL / SQL Card -->
+            <div class="glass-card p-6 flex flex-col justify-between fade-in-scroll border-t-2 border-t-emerald-500/60">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-5 text-emerald-400">
+                        <i class="fa-solid fa-database text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-outfit mb-2">MySQL / SQL</h3>
+                    <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
+                        Database design, relationships, joins, queries, indexing and optimization.
+                    </p>
+                </div>
+            </div>
+
+            <!-- WordPress Card -->
+            <div class="glass-card p-6 flex flex-col justify-between fade-in-scroll border-t-2 border-t-blue-500/60">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-5 text-blue-400">
+                        <i class="fa-brands fa-wordpress text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-outfit mb-2">WordPress</h3>
+                    <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
+                        WordPress development, theme customization, plugin customization, WooCommerce and WordPress customization.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Services Section -->
-<section class="py-20 relative border-b border-neutral-900/60">
+<section id="services" class="py-20 relative border-b border-neutral-900/60">
     <div class="absolute top-[30%] left-[-5%] w-[300px] h-[300px] rounded-full bg-accent/5 blur-[100px] pointer-events-none"></div>
     <div class="container mx-auto px-4 md:px-8 relative z-10">
         <div class="text-center mb-16 fade-in-scroll">
+            <div class="inline-block text-accent text-xs font-bold tracking-widest uppercase mb-2">What I Offer</div>
             <h2 class="text-3xl sm:text-4xl font-bold font-outfit mb-3">Professional Services</h2>
-            <p class="text-neutral-400 max-w-lg mx-auto text-sm sm:text-base">Custom digital solutions focused on quality, performance, and business growth.</p>
+            <p class="text-neutral-400 max-w-lg mx-auto text-sm sm:text-base">Targeted backend and full-stack development services tailored for scalability, speed, and reliability.</p>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4 max-w-5xl mx-auto">
+            <!-- PHP Development -->
             <div class="col fade-in-scroll">
-                <div class="glass-card p-6 h-full flex flex-col justify-between">
+                <div class="glass-card p-8 h-full flex flex-col justify-between border-l-4 border-l-accent">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-4 text-xl">
-                            <i class="fa-solid fa-laptop-code"></i>
+                            <i class="fa-brands fa-php text-2xl"></i>
                         </div>
-                        <h3 class="text-lg font-bold font-outfit text-white mb-2">Custom Software</h3>
+                        <h3 class="text-xl font-bold font-outfit text-white mb-2">PHP Development</h3>
                         <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
-                            Custom software solutions designed to match business processes, improve efficiency, and support long-term growth.
+                            Custom PHP websites, web applications, backend systems and database-driven solutions.
                         </p>
                     </div>
                 </div>
             </div>
 
+            <!-- Laravel Development -->
             <div class="col fade-in-scroll">
-                <div class="glass-card p-6 h-full flex flex-col justify-between">
+                <div class="glass-card p-8 h-full flex flex-col justify-between border-l-4 border-l-accent">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-4 text-xl">
-                            <i class="fa-solid fa-code"></i>
+                            <i class="fa-brands fa-laravel text-2xl"></i>
                         </div>
-                        <h3 class="text-lg font-bold font-outfit text-white mb-2">Custom Websites</h3>
+                        <h3 class="text-xl font-bold font-outfit text-white mb-2">Laravel Development</h3>
                         <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
-                            Responsive and user-friendly websites built for strong branding, fast performance, and a smooth user experience.
+                            Laravel web applications, REST APIs, admin dashboards, authentication systems, CRM, ERP and custom business applications.
                         </p>
                     </div>
                 </div>
             </div>
 
+            <!-- MySQL / SQL -->
             <div class="col fade-in-scroll">
-                <div class="glass-card p-6 h-full flex flex-col justify-between">
+                <div class="glass-card p-8 h-full flex flex-col justify-between border-l-4 border-l-accent">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-4 text-xl">
-                            <i class="fa-brands fa-wordpress-simple"></i>
+                            <i class="fa-solid fa-database text-2xl"></i>
                         </div>
-                        <h3 class="text-lg font-bold font-outfit text-white mb-2">WordPress Websites</h3>
+                        <h3 class="text-xl font-bold font-outfit text-white mb-2">MySQL / SQL</h3>
                         <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
-                            SEO-friendly WordPress websites suitable for blogs, business sites, and content management systems.
+                            Database design, SQL queries, relationships, optimization, data management and performance optimization.
                         </p>
                     </div>
                 </div>
             </div>
 
+            <!-- WordPress Development -->
             <div class="col fade-in-scroll">
-                <div class="glass-card p-6 h-full flex flex-col justify-between">
+                <div class="glass-card p-8 h-full flex flex-col justify-between border-l-4 border-l-accent">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-4 text-xl">
-                            <i class="fa-solid fa-store"></i>
+                            <i class="fa-brands fa-wordpress text-2xl"></i>
                         </div>
-                        <h3 class="text-lg font-bold font-outfit text-white mb-2">Shopify Development</h3>
+                        <h3 class="text-xl font-bold font-outfit text-white mb-2">WordPress Development</h3>
                         <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
-                            Secure and scalable Shopify stores with clean design, easy product management, and smooth checkout.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col fade-in-scroll">
-                <div class="glass-card p-6 h-full flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-4 text-xl">
-                            <i class="fa-solid fa-microchip"></i>
-                        </div>
-                        <h3 class="text-lg font-bold font-outfit text-white mb-2">AI Automation</h3>
-                        <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
-                            Integrating custom AI API workflows, large language models (LLMs), and automating backend data operations.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col fade-in-scroll">
-                <div class="glass-card p-6 h-full flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-4 text-xl">
-                            <i class="fa-solid fa-robot"></i>
-                        </div>
-                        <h3 class="text-lg font-bold font-outfit text-white mb-2">AI Workflow Agents</h3>
-                        <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-0">
-                            Engineering smart autonomous agents using platforms like n8n, Zapier, Make.com, and custom chatbots.
+                            Custom WordPress websites, theme customization, plugin customization, WooCommerce and custom WordPress functionality.
                         </p>
                     </div>
                 </div>
@@ -208,15 +220,15 @@ if ($pdo) {
         </div>
     </div>
 </section>
-
 
 <!-- Featured Projects Section -->
 <section class="py-20 relative">
     <div class="container mx-auto px-4 md:px-8">
         <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 fade-in-scroll">
             <div>
-                <h2 class="text-3xl sm:text-4xl font-bold font-outfit mb-3">Featured Creations</h2>
-                <p class="text-neutral-400 text-sm sm:text-base">Discover the latest architectural designs and production builds.</p>
+                <div class="inline-block text-accent text-xs font-bold tracking-widest uppercase mb-2">Portfolio Showcase</div>
+                <h2 class="text-3xl sm:text-4xl font-bold font-outfit mb-3">Featured Projects</h2>
+                <p class="text-neutral-400 text-sm sm:text-base">Production web applications, database architectures, and custom solutions.</p>
             </div>
             <a href="portfolio.php" class="text-sm font-semibold text-accent hover:text-orange-400 transition mt-4 sm:mt-0 no-underline">
                 Explore All Projects <i class="fa-solid fa-arrow-right-long ml-2 text-xs"></i>
@@ -286,8 +298,9 @@ if ($pdo) {
 <section class="py-20 bg-[#08080C]/50 border-t border-neutral-900/60 relative">
     <div class="container mx-auto px-4 md:px-8">
         <div class="text-center mb-16 fade-in-scroll">
-            <h2 class="text-3xl sm:text-4xl font-bold font-outfit mb-3">Client Kind Words</h2>
-            <p class="text-neutral-400 max-w-lg mx-auto text-sm sm:text-base">Hear what clients say about building products and automations together.</p>
+            <div class="inline-block text-accent text-xs font-bold tracking-widest uppercase mb-2">Testimonials</div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-outfit mb-3">Client Feedback</h2>
+            <p class="text-neutral-400 max-w-lg mx-auto text-sm sm:text-base">Hear what clients say about building reliable PHP, Laravel, and WordPress solutions together.</p>
         </div>
 
         <div class="row g-4">
@@ -301,43 +314,43 @@ if ($pdo) {
                 ],
                 [
                     'name' => 'Garudeya',
-                    'company' => 'Custom Script Client',
+                    'company' => 'Custom PHP Script Client',
                     'text' => 'Outstanding work on our custom backend script. The code is clean, securely validated, and executes database queries with extreme speed. Will work with him again.',
                     'initial' => 'G'
                 ],
                 [
                     'name' => 'Shahid Mansheer',
-                    'company' => 'E-commerce Business Owner',
-                    'text' => 'Awais built a highly responsive and custom website for our e-commerce business. Checkout processes are secure, page loading is lightning fast, and client conversions are up!',
+                    'company' => 'WordPress & WooCommerce Client',
+                    'text' => 'Awais built a highly responsive and custom WooCommerce website for our business. Checkout processes are secure, page loading is lightning fast, and client conversions are up!',
                     'initial' => 'S'
                 ],
                 [
                     'name' => 'Hamza',
-                    'company' => 'AI Automation & Social Media',
-                    'text' => 'Excellent work setting up our AI automation pipeline. We now manage, schedule, and publish social media posts and technical blogs automatically using custom APIs. Huge time saver.',
+                    'company' => 'Laravel REST API & Dashboard',
+                    'text' => 'Excellent work setting up our Laravel backend API and administration dashboard. Everything from user authentication to complex SQL queries is built with high precision.',
                     'initial' => 'H'
                 ],
                 [
                     'name' => 'Biller Ketlik',
-                    'company' => 'AI Agent Workflow Client',
-                    'text' => 'Superb AI agent workflow development. He automated our technical blog research and draft writing processes. A real game-changer for our content publishing timeline.',
+                    'company' => 'MySQL Database Optimization',
+                    'text' => 'Superb database architecture and query optimization. He refactored our MySQL schema, added proper indexing, and reduced query latency significantly.',
                     'initial' => 'B'
                 ],
                 [
                     'name' => 'Hamna Embroidery',
-                    'company' => 'Embroidery Textile Software',
+                    'company' => 'Embroidery Factory ERP Software',
                     'text' => 'Awais developed tailored management software for our embroidery textile factory. Now we track production details, inventories, and designs easily. Great backend design!',
                     'initial' => 'H'
                 ],
                 [
                     'name' => 'Jahanzaib',
-                    'company' => 'Inventory System Client',
+                    'company' => 'PHP Inventory System Client',
                     'text' => 'We needed an inventory management system to handle stock alerts, suppliers, and transactions. The solution Awais built is incredibly clean, secure, and intuitive.',
                     'initial' => 'J'
                 ],
                 [
                     'name' => 'John Bura',
-                    'company' => 'LMS System Client',
+                    'company' => 'Laravel LMS Portal Client',
                     'text' => 'Awesome job building our Learning Management System (LMS). Structured courses, video streaming, user roles, and payment gates work perfectly. High quality code.',
                     'initial' => 'J'
                 ]
@@ -369,12 +382,13 @@ if ($pdo) {
 <section class="py-20 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-tr from-accent/5 to-transparent pointer-events-none"></div>
     <div class="container mx-auto px-4 md:px-8 text-center relative z-10 fade-in-scroll">
-        <h2 class="text-3xl sm:text-5xl font-bold font-outfit mb-4">Let's build something epic together</h2>
-        <p class="text-neutral-400 max-w-xl mx-auto mb-8 text-sm sm:text-base">Need a custom web solution, Shopify integration, or AI automation workflow? Let's connect.</p>
+        <h2 class="text-3xl sm:text-5xl font-bold font-outfit mb-4">Let's build something scalable & secure together</h2>
+        <p class="text-neutral-400 max-w-xl mx-auto mb-8 text-sm sm:text-base">Need a custom PHP web application, Laravel API, MySQL database optimization, or WordPress website? Let's connect.</p>
         <a href="contact.php" class="px-8 py-4 rounded-xl text-base font-semibold text-white btn-glow no-underline inline-flex items-center gap-3">
-            Initiate Project Discussion <i class="fa-solid fa-paper-plane text-sm"></i>
+            Hire Me <i class="fa-solid fa-paper-plane text-sm"></i>
         </a>
     </div>
 </section>
 
 <?php require_once 'includes/footer.php'; ?>
+

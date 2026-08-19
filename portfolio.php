@@ -1,5 +1,6 @@
 <?php
-$page_title = "Awais Qarni - Developer Portfolio Showcase";
+$page_title = "Projects Portfolio | Full-Stack PHP & Laravel Developer";
+$meta_desc = "Explore custom web applications, Laravel systems, MySQL database designs, and WordPress websites developed by Awais Qarni.";
 $active_page = 'portfolio';
 require_once 'includes/header.php';
 
@@ -22,29 +23,27 @@ if ($pdo) {
     <div class="container mx-auto px-4 md:px-8 relative z-10">
         <!-- Heading -->
         <div class="text-center mb-16 fade-in-scroll">
+            <div class="inline-block text-accent text-xs font-bold tracking-widest uppercase mb-2">My Work</div>
             <h1 class="text-4xl font-extrabold font-outfit mb-3">Project Portfolio</h1>
-            <p class="text-neutral-400 max-w-lg mx-auto">Explore dynamic web architectures, Shopify custom apps, and AI automations built by Awais Qarni.</p>
+            <p class="text-neutral-400 max-w-lg mx-auto">Explore custom web applications, Laravel backends, database architectures, and WordPress solutions.</p>
         </div>
 
         <!-- Dynamic Category Filters -->
         <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in-scroll">
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-accent text-white transition duration-200" data-filter="all">
-                All Systems
+                All Projects
             </button>
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="PHP">
-                PHP Development
+                PHP
             </button>
-            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="Shopify">
-                Shopify
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="Laravel">
+                Laravel
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="MySQL">
+                MySQL
             </button>
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="WordPress">
                 WordPress
-            </button>
-            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="AI">
-                AI Solutions
-            </button>
-            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="Web Apps">
-                Web Apps
             </button>
         </div>
 
@@ -110,3 +109,4 @@ if ($pdo) {
 </section>
 
 <?php require_once 'includes/footer.php'; ?>
+

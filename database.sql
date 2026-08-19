@@ -45,12 +45,12 @@ CREATE TABLE IF NOT EXISTS `projects` (
 -- Seeding initial projects
 --
 INSERT INTO `projects` (`id`, `title`, `description`, `image`, `category`, `tech_stack`, `live_url`, `github_url`) VALUES
-(1, 'E-commerce Platform Architecture', 'A custom-designed e-commerce web application with secure payments, detailed catalogs, and cart managers.', 'Gemini_Generated_Image_868fj4868fj4868f.png', 'Web Apps', 'PHP, Laravel, React, MySQL', NULL, NULL),
-(2, 'AI Workflow Automation Engine', 'Connects third-party APIs with local triggers using n8n and Zapier to automate enterprise operations.', 'Gemini_Generated_Image_gzdn35gzdn35gzdn.png', 'AI', 'n8n, Make.com, Zapier, Python', NULL, NULL),
-(3, 'Smart AI Chatbot & Agent', 'A conversational AI assistant integrated with OpenAI APIs, custom knowledge bases, and dashboard charts.', 'Gemini_Generated_Image_isb6p6isb6p6isb6.png', 'AI', 'PHP, OpenAI API, JavaScript', NULL, NULL),
-(4, 'Custom Textile Manufacturing Software', 'Bespoke ERP software built for textile factory scheduling, embroidery designs, and inventory tracking.', 'Gemini_Generated_Image_msbmwnmsbmwnmsbm.png', 'PHP', 'PHP, Laravel, MySQL, Bootstrap 5', NULL, NULL),
-(5, 'Relational Inventory Management System', 'Tracks orders, supplier lists, warehouse stock, and logs real-time business financial statements.', 'Gemini_Generated_Image_qtjabzqtjabzqtja.png', 'PHP', 'Core PHP, MySQL, Tailwind CSS', NULL, NULL),
-(6, 'Learning Management System (LMS)', 'Multi-role portal supporting video lectures, course subscriptions, student trackers, and payment gateways.', 'Gemini_Generated_Image_t6hwy4t6hwy4t6hw.png', 'Web Apps', 'PHP, Laravel, JavaScript, SQL', NULL, NULL)
+(1, 'E-commerce Platform Architecture', 'A custom-designed e-commerce web application with secure payments, detailed catalogs, and cart managers.', 'Gemini_Generated_Image_868fj4868fj4868f.png', 'Laravel', 'PHP, Laravel, MySQL, Tailwind CSS', NULL, NULL),
+(2, 'WordPress Custom Theme & WooCommerce', 'Custom WordPress WooCommerce solution with customized checkout, product catalogs, and custom plugin features.', 'Gemini_Generated_Image_gzdn35gzdn35gzdn.png', 'WordPress', 'WordPress, WooCommerce, PHP, MySQL', NULL, NULL),
+(3, 'Custom REST API & Admin Portal', 'A robust backend API and administrative dashboard built with Laravel, role-based auth, and optimized SQL.', 'Gemini_Generated_Image_isb6p6isb6p6isb6.png', 'Laravel', 'PHP, Laravel, MySQL, REST APIs', NULL, NULL),
+(4, 'Custom Textile Manufacturing Software', 'Bespoke ERP software built for textile factory scheduling, embroidery designs, and inventory tracking.', 'Gemini_Generated_Image_msbmwnmsbmwnmsbm.png', 'PHP', 'Core PHP, MySQL, Bootstrap 5', NULL, NULL),
+(5, 'Relational Inventory Management System', 'Tracks orders, supplier lists, warehouse stock, and logs real-time business financial statements.', 'Gemini_Generated_Image_qtjabzqtjabzqtja.png', 'MySQL', 'Core PHP, MySQL, SQL Queries', NULL, NULL),
+(6, 'Learning Management System (LMS)', 'Multi-role portal supporting video lectures, course subscriptions, student trackers, and payment gateways.', 'Gemini_Generated_Image_t6hwy4t6hwy4t6hw.png', 'Laravel', 'PHP, Laravel, MySQL, MVC', NULL, NULL)
 ON DUPLICATE KEY UPDATE `id` = VALUES(`id`);
 
 -- --------------------------------------------------------
@@ -108,5 +108,5 @@ CREATE TABLE IF NOT EXISTS `settings` (
 -- Seeding initial settings
 --
 INSERT INTO `settings` (`id`, `site_name`, `email`, `facebook`, `linkedin`, `github`, `terms_content`) VALUES
-(1, 'Awais Qarni | Portfolio', 'chawaisdev92@gmail.com', 'https://facebook.com/chawaisdev', 'https://linkedin.com/in/chawaisdev', 'https://github.com/chawaisdev', '<h2>Terms & Services</h2><p>Welcome to our portfolio. By accessing this website, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p><p>We reserve the right to revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>')
+(1, 'Awais Qarni | Portfolio', 'chawaisdev92@gmail.com', 'https://facebook.com/chawaisdev', 'https://www.linkedin.com/in/choudhary-awais/', 'https://github.com/chawaisdev', '<h2>Terms & Services</h2><p>Welcome to our portfolio. By accessing this website, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p><p>We reserve the right to revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>')
 ON DUPLICATE KEY UPDATE `id` = VALUES(`id`);

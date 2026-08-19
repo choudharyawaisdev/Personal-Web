@@ -21,7 +21,7 @@ if ($blog_post) {
     $meta_desc = htmlspecialchars(substr(strip_tags($blog_post['content']), 0, 150));
 } else {
     $page_title = "Tech Insights & Development Blog | Awais Qarni";
-    $meta_desc = "Articles on Core PHP, Laravel, AI Automations, and modern web application development.";
+    $meta_desc = "Articles on Core PHP, Laravel Framework, MySQL Database Optimization, and WordPress development.";
 }
 
 $active_page = 'blog';
@@ -77,12 +77,12 @@ require_once 'includes/header.php';
                     <img src="Awais no.jpg" alt="Awais Qarni Profile" class="w-12 h-12 rounded-full object-cover border border-neutral-800">
                 <?php else: ?>
                     <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent">
-                        <i class="fa-solid fa-user-ninja"></i>
+                        <i class="fa-solid fa-code"></i>
                     </div>
                 <?php endif; ?>
                 <div>
                     <h4 class="text-sm font-bold text-white font-outfit m-0">Written by Awais Qarni</h4>
-                    <p class="text-xs text-neutral-500 m-0">Full Stack Developer & AI Automator</p>
+                    <p class="text-xs text-neutral-500 m-0">Full-Stack PHP & Laravel Developer</p>
                 </div>
             </div>
         </div>
@@ -96,8 +96,9 @@ require_once 'includes/header.php';
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <!-- Heading -->
             <div class="text-center mb-16 fade-in-scroll">
+                <div class="inline-block text-accent text-xs font-bold tracking-widest uppercase mb-2">Technical Articles</div>
                 <h1 class="text-4xl font-extrabold font-outfit mb-3">Tech Insights</h1>
-                <p class="text-neutral-400 max-w-lg mx-auto">Read technical deep-dives on Core PHP, Laravel, Shopify APIs, and LLM automation scripts.</p>
+                <p class="text-neutral-400 max-w-lg mx-auto">Read technical deep-dives on Core PHP, Laravel architectures, MySQL optimization, and WordPress development.</p>
             </div>
 
             <!-- Fetch and loop blogs -->

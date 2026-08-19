@@ -105,7 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$page_title = "Contact Awais Qarni | Get In Touch";
+$page_title = "Hire PHP & Laravel Developer | Contact Awais Qarni";
+$meta_desc = "Get in touch with Awais Qarni for custom PHP web applications, Laravel backends, MySQL database architecture, and WordPress solutions.";
 $active_page = 'contact';
 require_once 'includes/header.php';
 ?>
@@ -117,8 +118,9 @@ require_once 'includes/header.php';
     <div class="container mx-auto px-4 md:px-8 relative z-10">
         <!-- Title -->
         <div class="text-center mb-16 fade-in-scroll">
+            <div class="inline-block text-accent text-xs font-bold tracking-widest uppercase mb-2">Hire Me / Contact</div>
             <h1 class="text-4xl font-extrabold font-outfit mb-3">Get in Touch</h1>
-            <p class="text-neutral-400 max-w-lg mx-auto">Have a project idea, a job opportunity, or just want to say hi? Drop a message below.</p>
+            <p class="text-neutral-400 max-w-lg mx-auto">Have a PHP, Laravel, MySQL, or WordPress project in mind? Drop a message below to discuss your requirements.</p>
         </div>
 
         <div class="row g-5 justify-content-center">

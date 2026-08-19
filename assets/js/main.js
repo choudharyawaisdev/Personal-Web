@@ -62,35 +62,76 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Dark / Light Theme Toggle Mode
-    const themeBtn = document.getElementById('theme-toggle');
-    const htmlEl = document.documentElement;
-
-    // Check saved mode or default to system preferences (or default to dark as per user specs)
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    if (savedTheme === 'light') {
-        htmlEl.classList.remove('dark');
-        htmlEl.classList.add('light');
-    } else {
-        htmlEl.classList.remove('light');
-        htmlEl.classList.add('dark');
-    }
-
-    if (themeBtn) {
-        themeBtn.addEventListener('click', () => {
-            if (htmlEl.classList.contains('dark')) {
-                htmlEl.classList.remove('dark');
-                htmlEl.classList.add('light');
-                localStorage.setItem('theme', 'light');
-                showToast('Switched to Light Mode', 'success');
+    // 4. Dynamic Navbar Active Link Synchronization
+    const allNavLinks = document.querySelectorAll('[data-nav]');
+    
+    function setActiveNav(targetNav) {
+        if (!targetNav) return;
+        allNavLinks.forEach(link => {
+            if (link.getAttribute('data-nav') === targetNav) {
+                link.classList.add('active', 'text-accent');
+                link.classList.remove('text-neutral-400');
             } else {
-                htmlEl.classList.remove('light');
-                htmlEl.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                showToast('Switched to Dark Mode', 'success');
+                link.classList.remove('active', 'text-accent');
+                link.classList.add('text-neutral-400');
             }
         });
     }
+
+    function syncActiveNav() {
+        const hash = window.location.hash;
+        const path = window.location.pathname.toLowerCase();
+        const isHomePage = path.endsWith('index.php') || path.endsWith('/') || path.split('/').pop() === '';
+
+        if (isHomePage) {
+            if (hash === '#services') {
+                setActiveNav('services');
+                return;
+            } else if (hash === '#technologies') {
+                setActiveNav('technologies');
+                return;
+            }
+            
+            // Scroll spy detection on homepage
+            const scrollPosition = window.scrollY + 220;
+            const techSection = document.getElementById('technologies');
+            const servSection = document.getElementById('services');
+
+            if (servSection && scrollPosition >= servSection.offsetTop) {
+                setActiveNav('services');
+            } else if (techSection && scrollPosition >= techSection.offsetTop) {
+                setActiveNav('technologies');
+            } else {
+                setActiveNav('home');
+            }
+        } else if (path.includes('about.php')) {
+            setActiveNav('about');
+        } else if (path.includes('portfolio.php')) {
+            setActiveNav('portfolio');
+        } else if (path.includes('contact.php')) {
+            setActiveNav('contact');
+        }
+    }
+
+    // Run on initial load and hash change
+    syncActiveNav();
+    window.addEventListener('hashchange', syncActiveNav);
+    window.addEventListener('scroll', () => {
+        const path = window.location.pathname.toLowerCase();
+        if (path.endsWith('index.php') || path.endsWith('/') || path.split('/').pop() === '') {
+            syncActiveNav();
+        }
+    }, { passive: true });
+
+    // Immediate active state update on clicking navigation links
+    allNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const navId = link.getAttribute('data-nav');
+            if (navId) {
+                setActiveNav(navId);
+            }
+        });
+    });
 
     // 5. Custom Animated Toast Notifications
     window.showToast = function(message, type = 'success') {

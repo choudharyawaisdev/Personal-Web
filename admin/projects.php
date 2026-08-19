@@ -314,15 +314,14 @@ if ($action === 'list') {
                                 <label class="block text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-2">Category</label>
                                 <select name="category" required class="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 rounded-lg text-sm focus:outline-none focus:border-accent text-white">
                                     <option value="PHP" <?php echo ($project && $project['category'] === 'PHP') ? 'selected' : ''; ?>>PHP</option>
-                                    <option value="Shopify" <?php echo ($project && $project['category'] === 'Shopify') ? 'selected' : ''; ?>>Shopify</option>
+                                    <option value="Laravel" <?php echo ($project && $project['category'] === 'Laravel') ? 'selected' : ''; ?>>Laravel</option>
+                                    <option value="MySQL" <?php echo ($project && $project['category'] === 'MySQL') ? 'selected' : ''; ?>>MySQL</option>
                                     <option value="WordPress" <?php echo ($project && $project['category'] === 'WordPress') ? 'selected' : ''; ?>>WordPress</option>
-                                    <option value="AI" <?php echo ($project && $project['category'] === 'AI') ? 'selected' : ''; ?>>AI</option>
-                                    <option value="Web Apps" <?php echo ($project && $project['category'] === 'Web Apps') ? 'selected' : ''; ?>>Web Apps</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-2">Tech Stack (comma separated)</label>
-                                <input type="text" name="tech_stack" required value="<?php echo $project ? htmlspecialchars($project['tech_stack']) : ''; ?>" placeholder="PHP, MySQL, React, Tailwind"
+                                <input type="text" name="tech_stack" required value="<?php echo $project ? htmlspecialchars($project['tech_stack']) : ''; ?>" placeholder="PHP, Laravel, MySQL, WordPress"
                                        class="w-full px-4 py-3 form-input-custom rounded-lg text-sm">
                             </div>
                         </div>
