@@ -12,7 +12,7 @@ if (!defined('DB_USER'))
 if (!defined('DB_PASS'))
     define('DB_PASS', '');
 if (!defined('DB_NAME'))
-    define('DB_NAME', 'personal_web');
+    define('DB_NAME', 'myweb');
 
 $pdo = null;
 $db_error = null;
