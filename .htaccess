@@ -1,0 +1,18 @@
+# Apache Rewrite Rules for Portfolio Website
+# Enables clean, extensionless URLs and SEO-friendly blog paths
+
+Options -MultiViews
+RewriteEngine On
+RewriteBase /Portfolio/
+
+# Redirect direct .php requests to extensionless URLs (e.g. index.php -> index)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Portfolio/([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Clean SEO Friendly URLs for blog posts: /Portfolio/blog/post-slug -> /Portfolio/blog.php?slug=post-slug
+RewriteRule ^blog/([a-zA-Z0-9\-]+)/?$ blog.php?slug=$1 [QSA,L]
+
+# Resolve extensionless requests internally (e.g. /Portfolio/about -> /Portfolio/about.php)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]

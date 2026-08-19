@@ -1,170 +1,112 @@
-<?php include 'layouts/header.php'; ?>
+<?php
+$page_title = "Awais Qarni - Developer Portfolio Showcase";
+$active_page = 'portfolio';
+require_once 'includes/header.php';
 
-<main class="main">
+// Fetch all projects from database
+$projects = [];
+if ($pdo) {
+    try {
+        $stmt = $pdo->query("SELECT * FROM projects ORDER BY id DESC");
+        $projects = $stmt->fetchAll();
+    } catch (PDOException $e) {
+        // Fallback
+    }
+}
+?>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+<section class="py-20 relative">
+    <!-- Glow -->
+    <div class="absolute top-[20%] right-[-10%] w-[350px] h-[350px] rounded-full bg-accent/5 blur-[120px] pointer-events-none"></div>
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Portfolio</h2>
-            <p>
-                A showcase of my professional work including WordPress websites,
-                Shopify stores, and custom-developed web applications built with
-                performance, usability, and scalability in mind.
-            </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-                <!-- Portfolio Filters -->
-                <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
-                    <li data-filter="*" class="filter-active">All</li>
-                    <li data-filter=".filter-wordpress">WordPress</li>
-                    <li data-filter=".filter-shopify">Shopify</li>
-                    <li data-filter=".filter-custom">Custom Development</li>
-                </ul>
-
-                <!-- Portfolio Items -->
-                <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
-
-                    <!-- WordPress Project -->
-                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-wordpress">
-                        <div class="portfolio-card">
-                            <div class="portfolio-img">
-                                <img src="assets/img/portfolio/Web1.jpg" alt="Looking Glass Academy" class="img-fluid">
-                                <div class="portfolio-overlay">
-                                    <a href="assets/img/portfolio/Web1.jpg" class="glightbox portfolio-lightbox">
-                                        <i class="bi bi-plus"></i>
-                                    </a>
-                                    <a href="https://lookingglassacademy.net/" target="_blank"
-                                        class="portfolio-details-link">
-                                        <i class="bi bi-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Looking Glass Academy</h4>
-                                <p>Learning Management System (LMS)</p>
-                                <div class="portfolio-tags">
-                                    <span>WordPress</span>
-                                    <span>LMS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- WordPress E-Commerce -->
-                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-wordpress">
-                        <div class="portfolio-card">
-                            <div class="portfolio-img">
-                                <img src="assets/img/portfolio/Web2.jpg" alt="Sara Store" class="img-fluid">
-                                <div class="portfolio-overlay">
-                                    <a href="assets/img/portfolio/Web2.jpg" class="glightbox portfolio-lightbox">
-                                        <i class="bi bi-plus"></i>
-                                    </a>
-                                    <a href="https://sarastore.pk/" class="portfolio-details-link">
-                                        <i class="bi bi-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Sara Store</h4>
-                                <p>E-Commerce / Online Shopping Website</p>
-                                <div class="portfolio-tags">
-                                    <span>WordPress</span>
-                                    <span>WooCommerce</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- WordPress Custom Design -->
-                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-wordpress">
-                        <div class="portfolio-card">
-                            <div class="portfolio-img">
-                                <img src="assets/img/portfolio/Web3.jpg" alt="Box Wala" class="img-fluid">
-                                <div class="portfolio-overlay">
-                                    <a href="assets/img/portfolio/Web3.jpg" class="glightbox portfolio-lightbox">
-                                        <i class="bi bi-plus"></i>
-                                    </a>
-                                    <a href="https://boxwala.pk/" class="portfolio-details-link">
-                                        <i class="bi bi-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Box Wala</h4>
-                                <p>Custom Packaging & Box Design Platform</p>
-                                <div class="portfolio-tags">
-                                    <span>WordPress</span>
-                                    <span>Custom Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Custom Development -->
-                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-custom">
-                        <div class="portfolio-card">
-                            <div class="portfolio-img">
-                                <img src="assets/img/portfolio/Web4.jpg" alt="Cafe Chinos" class="img-fluid">
-                                <div class="portfolio-overlay">
-                                    <a href="assets/img/portfolio/Web4.jpg" class="glightbox portfolio-lightbox">
-                                        <i class="bi bi-plus"></i>
-                                    </a>
-                                    <a href="https://cafechinos.cafe/" class="portfolio-details-link">
-                                        <i class="bi bi-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Cafe Chinos</h4>
-                                <p>Online Food Ordering System</p>
-                                <div class="portfolio-tags">
-                                    <span>Custom Development</span>
-                                    <span>PHP</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Shopify Store -->
-                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-shopify">
-                        <div class="portfolio-card">
-                            <div class="portfolio-img">
-                                <img src="assets/img/portfolio/Web5.jpg" alt="Niwali" class="img-fluid">
-                                <div class="portfolio-overlay">
-                                    <a href="assets/img/portfolio/Web5.jpg" class="glightbox portfolio-lightbox">
-                                        <i class="bi bi-plus"></i>
-                                    </a>
-                                    <a href="https://niwali.com/" class="portfolio-details-link">
-                                        <i class="bi bi-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Niwali</h4>
-                                <p>Herbal & Medicine E-Commerce Store</p>
-                                <div class="portfolio-tags">
-                                    <span>Shopify</span>
-                                    <span>E-Commerce</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!-- End Portfolio Container -->
-
-            </div>
+    <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <!-- Heading -->
+        <div class="text-center mb-16 fade-in-scroll">
+            <h1 class="text-4xl font-extrabold font-outfit mb-3">Project Portfolio</h1>
+            <p class="text-neutral-400 max-w-lg mx-auto">Explore dynamic web architectures, Shopify custom apps, and AI automations built by Awais Qarni.</p>
         </div>
 
-    </section>
-    <!-- End Portfolio Section -->
+        <!-- Dynamic Category Filters -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in-scroll">
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-accent text-white transition duration-200" data-filter="all">
+                All Systems
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="PHP">
+                PHP Development
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="Shopify">
+                Shopify
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="WordPress">
+                WordPress
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="AI">
+                AI Solutions
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="Web Apps">
+                Web Apps
+            </button>
+        </div>
 
-</main>
+        <!-- Project Cards Grid -->
+        <div class="row g-4" id="portfolio-grid">
+            <?php if (empty($projects)): ?>
+                <div class="col-12 text-center text-neutral-500 py-20 fade-in-scroll">
+                    <i class="fa-regular fa-folder-open text-5xl mb-4 text-neutral-700 block"></i>
+                    No projects found. Log in to the <a href="admin/login.php" class="text-accent underline font-semibold">Admin Panel</a> to add projects.
+                </div>
+            <?php else: ?>
+                <?php foreach ($projects as $proj): ?>
+                    <div class="col-lg-4 col-md-6 project-card-item fade-in-scroll" data-category="<?php echo htmlspecialchars($proj['category']); ?>">
+                        <div class="glass-card h-full flex flex-col p-4">
+                            <div class="project-card-image mb-4 relative aspect-[16/10] bg-neutral-900 rounded-xl overflow-hidden">
+                                <?php 
+                                $img_path = 'uploads/projects/' . $proj['image'];
+                                if (!empty($proj['image']) && file_exists($img_path)): 
+                                ?>
+                                    <img src="<?php echo $img_path; ?>" alt="<?php echo htmlspecialchars($proj['title']); ?>" class="w-full h-full object-cover">
+                                <?php else: ?>
+                                    <div class="w-full h-full flex items-center justify-center text-neutral-800">
+                                        <i class="fa-regular fa-image text-5xl"></i>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-accent mb-2 block"><?php echo htmlspecialchars($proj['category']); ?></span>
+                            
+                            <h3 class="text-lg font-bold font-outfit text-white mb-2"><?php echo htmlspecialchars($proj['title']); ?></h3>
+                            
+                            <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-4 flex-grow">
+                                <?php echo htmlspecialchars($proj['description']); ?>
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <?php 
+                                $tags = explode(',', $proj['tech_stack']);
+                                foreach ($tags as $tag): 
+                                ?>
+                                    <span class="tech-badge"><?php echo htmlspecialchars(trim($tag)); ?></span>
+                                <?php endforeach; ?>
+                            </div>
 
-<?php include 'layouts/footer.php'; ?>
+                            <div class="flex items-center gap-3 pt-3 border-t border-neutral-900/80 mt-auto">
+                                <?php if (!empty($proj['live_url'])): ?>
+                                    <a href="<?php echo htmlspecialchars($proj['live_url']); ?>" target="_blank" class="text-xs text-white hover:text-accent font-semibold flex items-center gap-1.5 no-underline transition">
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Live Preview
+                                    </a>
+                                <?php endif; ?>
+                                <?php if (!empty($proj['github_url'])): ?>
+                                    <a href="<?php echo htmlspecialchars($proj['github_url']); ?>" target="_blank" class="text-xs text-neutral-400 hover:text-white font-semibold flex items-center gap-1.5 no-underline ml-auto transition">
+                                        <i class="fa-brands fa-github text-sm"></i> Code Repository
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+
+<?php require_once 'includes/footer.php'; ?>
