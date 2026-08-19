@@ -54,8 +54,8 @@ if ($pdo) {
             <?php else: ?>
                 <?php foreach ($projects as $proj): ?>
                     <div class="col-lg-4 col-md-6 project-card-item fade-in-scroll" data-category="<?php echo htmlspecialchars($proj['category']); ?>">
-                        <div class="glass-card h-full flex flex-col p-4">
-                            <div class="project-card-image mb-4 relative aspect-[16/10] bg-neutral-900 rounded-xl overflow-hidden">
+                        <div class="glass-card h-full flex flex-col overflow-hidden">
+                            <div class="project-card-image relative aspect-[16/10] bg-neutral-900 overflow-hidden w-full">
                                 <?php 
                                 $img_path = 'uploads/projects/' . $proj['image'];
                                 if (!empty($proj['image']) && file_exists($img_path)): 
@@ -68,34 +68,36 @@ if ($pdo) {
                                 <?php endif; ?>
                             </div>
                             
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-accent mb-2 block"><?php echo htmlspecialchars($proj['category']); ?></span>
-                            
-                            <h3 class="text-lg font-bold font-outfit text-white mb-2"><?php echo htmlspecialchars($proj['title']); ?></h3>
-                            
-                            <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-4 flex-grow">
-                                <?php echo htmlspecialchars($proj['description']); ?>
-                            </p>
-                            
-                            <div class="flex flex-wrap gap-1.5 mb-4">
-                                <?php 
-                                $tags = explode(',', $proj['tech_stack']);
-                                foreach ($tags as $tag): 
-                                ?>
-                                    <span class="tech-badge"><?php echo htmlspecialchars(trim($tag)); ?></span>
-                                <?php endforeach; ?>
-                            </div>
+                            <div class="p-5 flex flex-col flex-grow">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-accent mb-2 block"><?php echo htmlspecialchars($proj['category']); ?></span>
+                                
+                                <h3 class="text-lg font-bold font-outfit text-white mb-2"><?php echo htmlspecialchars($proj['title']); ?></h3>
+                                
+                                <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-4 flex-grow">
+                                    <?php echo htmlspecialchars($proj['description']); ?>
+                                </p>
+                                
+                                <div class="flex flex-wrap gap-1.5 mb-4">
+                                    <?php 
+                                    $tags = explode(',', $proj['tech_stack']);
+                                    foreach ($tags as $tag): 
+                                    ?>
+                                        <span class="tech-badge"><?php echo htmlspecialchars(trim($tag)); ?></span>
+                                    <?php endforeach; ?>
+                                </div>
 
-                            <div class="flex items-center gap-3 pt-3 border-t border-neutral-900/80 mt-auto">
-                                <?php if (!empty($proj['live_url'])): ?>
-                                    <a href="<?php echo htmlspecialchars($proj['live_url']); ?>" target="_blank" class="text-xs text-white hover:text-accent font-semibold flex items-center gap-1.5 no-underline transition">
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Live Preview
-                                    </a>
-                                <?php endif; ?>
-                                <?php if (!empty($proj['github_url'])): ?>
-                                    <a href="<?php echo htmlspecialchars($proj['github_url']); ?>" target="_blank" class="text-xs text-neutral-400 hover:text-white font-semibold flex items-center gap-1.5 no-underline ml-auto transition">
-                                        <i class="fa-brands fa-github text-sm"></i> Code Repository
-                                    </a>
-                                <?php endif; ?>
+                                <div class="flex items-center gap-3 pt-3 border-t border-neutral-900/80 mt-auto">
+                                    <?php if (!empty($proj['live_url'])): ?>
+                                        <a href="<?php echo htmlspecialchars($proj['live_url']); ?>" target="_blank" class="text-xs text-white hover:text-accent font-semibold flex items-center gap-1.5 no-underline transition">
+                                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Live Preview
+                                        </a>
+                                    <?php endif; ?>
+                                    <?php if (!empty($proj['github_url'])): ?>
+                                        <a href="<?php echo htmlspecialchars($proj['github_url']); ?>" target="_blank" class="text-xs text-neutral-400 hover:text-white font-semibold flex items-center gap-1.5 no-underline ml-auto transition">
+                                            <i class="fa-brands fa-github text-sm"></i> Code Repository
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>

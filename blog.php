@@ -125,9 +125,9 @@ require_once 'includes/header.php';
                 <?php else: ?>
                     <?php foreach ($blogs as $post): ?>
                         <div class="col-lg-4 col-md-6 fade-in-scroll">
-                            <div class="glass-card h-full flex flex-col p-4">
+                            <div class="glass-card h-full flex flex-col overflow-hidden">
                                 <!-- Featured Image wrapper -->
-                                <div class="project-card-image mb-4 relative aspect-[16/10] bg-neutral-900 rounded-xl overflow-hidden">
+                                <div class="project-card-image relative aspect-[16/10] bg-neutral-900 overflow-hidden w-full">
                                     <?php 
                                     $img_path = 'uploads/projects/' . $post['image'];
                                     if (!empty($post['image']) && file_exists($img_path)): 
@@ -140,28 +140,30 @@ require_once 'includes/header.php';
                                     <?php endif; ?>
                                 </div>
 
-                                <!-- Date -->
-                                <div class="text-[10px] text-neutral-500 mb-2 font-inter">
-                                    <i class="fa-regular fa-calendar mr-1"></i> <?php echo date('M d, Y', strtotime($post['created_at'])); ?>
-                                </div>
+                                <div class="p-5 flex flex-col flex-grow">
+                                    <!-- Date -->
+                                    <div class="text-[10px] text-neutral-500 mb-2 font-inter">
+                                        <i class="fa-regular fa-calendar mr-1"></i> <?php echo date('M d, Y', strtotime($post['created_at'])); ?>
+                                    </div>
 
-                                <!-- Title -->
-                                <h3 class="text-lg font-bold font-outfit text-white mb-3 hover:text-accent transition duration-200">
-                                    <a href="blog.php?slug=<?php echo $post['slug']; ?>" class="no-underline text-white hover:text-accent">
-                                        <?php echo htmlspecialchars($post['title']); ?>
-                                    </a>
-                                </h3>
+                                    <!-- Title -->
+                                    <h3 class="text-lg font-bold font-outfit text-white mb-3 hover:text-accent transition duration-200">
+                                        <a href="blog.php?slug=<?php echo $post['slug']; ?>" class="no-underline text-white hover:text-accent">
+                                            <?php echo htmlspecialchars($post['title']); ?>
+                                        </a>
+                                    </h3>
 
-                                <!-- Snippet -->
-                                <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-4 flex-grow">
-                                    <?php echo htmlspecialchars(substr(strip_tags($post['content']), 0, 120)) . (strlen(strip_tags($post['content'])) > 120 ? '...' : ''); ?>
-                                </p>
+                                    <!-- Snippet -->
+                                    <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-4 flex-grow">
+                                        <?php echo htmlspecialchars(substr(strip_tags($post['content']), 0, 120)) . (strlen(strip_tags($post['content'])) > 120 ? '...' : ''); ?>
+                                    </p>
 
-                                <!-- Read More link -->
-                                <div class="pt-3 border-t border-neutral-900/80 mt-auto">
-                                    <a href="blog.php?slug=<?php echo $post['slug']; ?>" class="text-xs text-accent hover:text-orange-400 font-semibold flex items-center gap-1.5 no-underline transition">
-                                        Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                                    </a>
+                                    <!-- Read More link -->
+                                    <div class="pt-3 border-t border-neutral-900/80 mt-auto">
+                                        <a href="blog.php?slug=<?php echo $post['slug']; ?>" class="text-xs text-accent hover:text-orange-400 font-semibold flex items-center gap-1.5 no-underline transition">
+                                            Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
