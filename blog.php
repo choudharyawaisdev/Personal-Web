@@ -120,7 +120,7 @@ require_once 'includes/header.php';
                 <?php if (empty($blogs)): ?>
                     <div class="col-12 text-center text-neutral-500 py-20 fade-in-scroll">
                         <i class="fa-regular fa-newspaper text-5xl mb-4 text-neutral-700 block"></i>
-                        No blog posts published yet. Visit the <a href="admin/login.php" class="text-accent underline font-semibold">Admin Panel</a> to write your first post.
+                        No articles published yet. Technical articles and development insights will appear here soon.
                     </div>
                 <?php else: ?>
                     <?php foreach ($blogs as $post): ?>

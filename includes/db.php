@@ -5,10 +5,14 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Database Configuration
-if (!defined('DB_HOST')) define('DB_HOST', 'localhost');
-if (!defined('DB_USER')) define('DB_USER', 'devtasoft_portfolio');
-if (!defined('DB_PASS')) define('DB_PASS', 'devtasoft_portfolio');
-if (!defined('DB_NAME')) define('DB_NAME', 'devtasoft_portfolio');
+if (!defined('DB_HOST'))
+    define('DB_HOST', 'localhost');
+if (!defined('DB_USER'))
+    define('DB_USER', 'root');
+if (!defined('DB_PASS'))
+    define('DB_PASS', '');
+if (!defined('DB_NAME'))
+    define('DB_NAME', 'personal_web');
 
 $pdo = null;
 $db_error = null;
@@ -40,14 +44,16 @@ try {
 }
 
 // Security Helper: CSRF Token Generator and Validator
-function get_csrf_token() {
+function get_csrf_token()
+{
     if (empty($_SESSION['csrf_token'])) {
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     }
     return $_SESSION['csrf_token'];
 }
 
-function verify_csrf_token($token) {
+function verify_csrf_token($token)
+{
     if (!isset($_SESSION['csrf_token']) || $token !== $_SESSION['csrf_token']) {
         return false;
     }
@@ -55,7 +61,8 @@ function verify_csrf_token($token) {
 }
 
 // Security Helper: Input Sanitization
-function sanitize_input($data) {
+function sanitize_input($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data, ENT_QUOTES, 'UTF-8');

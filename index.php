@@ -240,7 +240,7 @@ if ($pdo) {
         <div class="row g-4">
             <?php if (empty($featured_projects)): ?>
                 <div class="col-12 text-center text-neutral-500 py-10">
-                    No featured projects loaded yet. Visit the <a href="admin/login.php" class="text-accent underline">Admin Panel</a> to upload one.
+                    Featured web applications and systems will be displayed here soon.
                 </div>
             <?php else: ?>
                 <?php foreach ($featured_projects as $proj): ?>

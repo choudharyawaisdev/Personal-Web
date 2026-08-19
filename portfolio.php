@@ -39,9 +39,6 @@ if ($pdo) {
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="Laravel">
                 Laravel
             </button>
-            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="MySQL">
-                MySQL
-            </button>
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="WordPress">
                 WordPress
             </button>
@@ -52,7 +49,7 @@ if ($pdo) {
             <?php if (empty($projects)): ?>
                 <div class="col-12 text-center text-neutral-500 py-20 fade-in-scroll">
                     <i class="fa-regular fa-folder-open text-5xl mb-4 text-neutral-700 block"></i>
-                    No projects found. Log in to the <a href="admin/login.php" class="text-accent underline font-semibold">Admin Panel</a> to add projects.
+                    No projects found at the moment. Please check back soon or contact me for custom work.
                 </div>
             <?php else: ?>
                 <?php foreach ($projects as $proj): ?>

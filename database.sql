@@ -1,9 +1,6 @@
 -- Core PHP Portfolio Website Database Schema
 -- Exported for phpMyAdmin / MySQL direct import
--- Database: `devtasoft_portfolio`
 
-CREATE DATABASE IF NOT EXISTS `devtasoft_portfolio` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `devtasoft_portfolio`;
 
 -- --------------------------------------------------------
 
@@ -45,12 +42,17 @@ CREATE TABLE IF NOT EXISTS `projects` (
 -- Seeding initial projects
 --
 INSERT INTO `projects` (`id`, `title`, `description`, `image`, `category`, `tech_stack`, `live_url`, `github_url`) VALUES
-(1, 'E-commerce Platform Architecture', 'A custom-designed e-commerce web application with secure payments, detailed catalogs, and cart managers.', 'Gemini_Generated_Image_868fj4868fj4868f.png', 'Laravel', 'PHP, Laravel, MySQL, Tailwind CSS', NULL, NULL),
-(2, 'WordPress Custom Theme & WooCommerce', 'Custom WordPress WooCommerce solution with customized checkout, product catalogs, and custom plugin features.', 'Gemini_Generated_Image_gzdn35gzdn35gzdn.png', 'WordPress', 'WordPress, WooCommerce, PHP, MySQL', NULL, NULL),
-(3, 'Custom REST API & Admin Portal', 'A robust backend API and administrative dashboard built with Laravel, role-based auth, and optimized SQL.', 'Gemini_Generated_Image_isb6p6isb6p6isb6.png', 'Laravel', 'PHP, Laravel, MySQL, REST APIs', NULL, NULL),
-(4, 'Custom Textile Manufacturing Software', 'Bespoke ERP software built for textile factory scheduling, embroidery designs, and inventory tracking.', 'Gemini_Generated_Image_msbmwnmsbmwnmsbm.png', 'PHP', 'Core PHP, MySQL, Bootstrap 5', NULL, NULL),
-(5, 'Relational Inventory Management System', 'Tracks orders, supplier lists, warehouse stock, and logs real-time business financial statements.', 'Gemini_Generated_Image_qtjabzqtjabzqtja.png', 'MySQL', 'Core PHP, MySQL, SQL Queries', NULL, NULL),
-(6, 'Learning Management System (LMS)', 'Multi-role portal supporting video lectures, course subscriptions, student trackers, and payment gateways.', 'Gemini_Generated_Image_t6hwy4t6hwy4t6hw.png', 'Laravel', 'PHP, Laravel, MySQL, MVC', NULL, NULL)
+(1, 'Sara Store - E-Commerce Store', 'A full-featured WordPress & WooCommerce online store featuring customized product catalogs, instant checkout, payment gateways, and custom sales badges.', 'sarastore.pk.jpg', 'WordPress', 'WordPress, WooCommerce, PHP, MySQL', 'https://sarastore.pk/', NULL),
+(2, 'Hafiz Talha - Personal Brand & Portfolio', 'Custom WordPress website designed with high performance, smooth animations, dynamic blog management, and optimized SEO structure.', 'hafiztalha.com.jpg', 'WordPress', 'WordPress, PHP, MySQL, Elementor Pro', 'https://hafiztalha.com/', NULL),
+(3, 'Boxwala - Custom Packaging & Store', 'Modern WooCommerce platform engineered for custom packaging solutions, custom quotation forms, responsive catalog filtering, and bulk order management.', 'boxwala.pk.jpg', 'WordPress', 'WordPress, WooCommerce, PHP, MySQL', 'https://boxwala.pk/', NULL),
+(4, 'Looking Glass Academy - Educational Portal', 'Comprehensive educational academy website with course enrollments, interactive curriculum showcases, event schedules, and contact lead capture.', 'lookingglassacademy.net.jpg', 'WordPress', 'WordPress, PHP, MySQL, LMS Integration', 'https://lookingglassacademy.net/', NULL),
+(5, 'HerbalCare - Natural Products Store', 'Custom-designed herbal e-commerce website with product showcase, discount coupon system, order tracking, and multiple payment integrations.', 'herbal-ecommerce-store.png', 'WordPress', 'WordPress, WooCommerce, PHP, MySQL', NULL, NULL),
+(6, 'CoursePro - Online Learning & Course Platform', 'High-performance online course & education management platform built with Laravel featuring student dashboards, course progress tracking, video streaming, and secure payments.', 'coursepro.today.jpg', 'Laravel', 'PHP, Laravel, MySQL, REST APIs', 'https://coursepro.today/', NULL),
+(7, 'Multi-Vendor E-Commerce Platform', 'Enterprise multi-vendor e-commerce architecture allowing multiple sellers to register, manage inventory, process orders, and track payout analytics with an admin dashboard.', 'ecommerce-multi-vendor-platform.png', 'Laravel', 'PHP, Laravel, MySQL, Tailwind CSS', NULL, NULL),
+(8, 'All-in-One LMS Education System', 'Complete learning management portal for modern education with quizzes, assignments, certificate generation, attendance monitoring, and role-based permissions.', 'learning-management-system-lms.png', 'Laravel', 'PHP, Laravel, MySQL, REST APIs', NULL, NULL),
+(9, 'RestroHub - Restaurant POS & Order Management', 'Complete restaurant POS solution with dine-in/takeaway order routing, live kitchen display system (KDS), delivery tracking, and revenue analytics.', 'restaurant-management-pos-system.png', 'Laravel', 'PHP, Laravel, MySQL, WebSockets', NULL, NULL),
+(10, 'Employee HRM & Payroll Management System', 'All-in-one HR system managing employee records, real-time biometric attendance, automated salary slips, leave requests, and departmental performance tracking.', 'employee-hrm-management-system.png', 'Laravel', 'PHP, Laravel, MySQL, MVC Architecture', NULL, NULL),
+(11, 'Smart Inventory Management Software & ERP', 'Real-time inventory tracking, warehouse multi-location management, sales & purchase invoicing, low-stock alerts, and financial reporting.', 'inventory-management-software.png', 'PHP', 'Core PHP, MySQL, SQL Optimization, Bootstrap 5', NULL, NULL)
 ON DUPLICATE KEY UPDATE `id` = VALUES(`id`);
 
 -- --------------------------------------------------------

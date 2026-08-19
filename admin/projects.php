@@ -315,7 +315,6 @@ if ($action === 'list') {
                                 <select name="category" required class="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 rounded-lg text-sm focus:outline-none focus:border-accent text-white">
                                     <option value="PHP" <?php echo ($project && $project['category'] === 'PHP') ? 'selected' : ''; ?>>PHP</option>
                                     <option value="Laravel" <?php echo ($project && $project['category'] === 'Laravel') ? 'selected' : ''; ?>>Laravel</option>
-                                    <option value="MySQL" <?php echo ($project && $project['category'] === 'MySQL') ? 'selected' : ''; ?>>MySQL</option>
                                     <option value="WordPress" <?php echo ($project && $project['category'] === 'WordPress') ? 'selected' : ''; ?>>WordPress</option>
                                 </select>
                             </div>

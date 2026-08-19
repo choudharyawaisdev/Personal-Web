@@ -64,10 +64,11 @@ $gh_link = !empty($site_settings['github']) ? $site_settings['github'] : 'https:
 
                 <!-- Extra Links & Legal -->
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="font-outfit text-white font-semibold text-base tracking-wider uppercase mb-4">Legal & Admin</h4>
+                    <h4 class="font-outfit text-white font-semibold text-base tracking-wider uppercase mb-4">Legal & Policies</h4>
                     <ul class="list-unstyled space-y-2.5 text-sm mb-6">
                         <li><a href="terms.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Terms & Services</a></li>
-                        <li><a href="admin/login.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Admin Control Panel</a></li>
+                        <li><a href="terms.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Privacy Policy</a></li>
+                        <li><a href="contact.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Get in Touch</a></li>
                     </ul>
                 </div>
             </div>
