@@ -97,7 +97,7 @@ if ($pdo) {
             <header class="flex items-center justify-between mb-8 pb-6 border-b border-neutral-900/60">
                 <div>
                     <h1 class="text-3xl font-extrabold font-outfit m-0">Dashboard</h1>
-                    <p class="text-neutral-400 text-xs mt-1">Hello, <?php echo htmlspecialchars($_SESSION['admin_email']); ?>. Welcome back.</p>
+                    <p class="text-neutral-400 text-xs mt-1">Hello, <?php echo htmlspecialchars($_SESSION['admin_username'] ?? $_SESSION['admin_email'] ?? 'Admin'); ?>. Welcome back.</p>
                 </div>
                 <!-- Mini mobile logout link -->
                 <div class="flex items-center gap-4 md:hidden">
