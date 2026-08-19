@@ -13,31 +13,33 @@ $error = "";
 $csrf_token = get_csrf_token();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = isset($_POST['email']) ? sanitize_input($_POST['email']) : '';
+    $login_id = isset($_POST['login_id']) ? sanitize_input($_POST['login_id']) : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
     $token_received = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
 
-    if (!$email || !$password) {
-        $error = "Please enter both email and password.";
+    if (!$login_id || !$password) {
+        $error = "Please enter both your email/username and password.";
     } elseif (!verify_csrf_token($token_received)) {
         $error = "Security validation failed. Please try again.";
     } else {
         if ($pdo) {
             try {
-                $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ? LIMIT 1");
-                $stmt->execute([$email]);
+                // Check by email or username
+                $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ? OR username = ? LIMIT 1");
+                $stmt->execute([$login_id, $login_id]);
                 $user = $stmt->fetch();
 
                 if ($user && password_verify($password, $user['password'])) {
                     // Password matches, log user in
                     $_SESSION['admin_logged_in'] = true;
-                    $_SESSION['admin_email'] = $user['email'];
                     $_SESSION['admin_id'] = $user['id'];
+                    $_SESSION['admin_email'] = $user['email'];
+                    $_SESSION['admin_username'] = !empty($user['username']) ? $user['username'] : explode('@', $user['email'])[0];
                     
                     header("Location: dashboard.php");
                     exit;
                 } else {
-                    $error = "Invalid email or password.";
+                    $error = "Invalid email/username or password.";
                 }
             } catch (PDOException $e) {
                 $error = "Database error: " . $e->getMessage();
@@ -115,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <?php if ($error): ?>
             <div class="p-3 mb-5 rounded-lg text-xs bg-rose-950/80 text-rose-300 border border-rose-500/30">
-                ✖ <?php echo $error; ?>
+                <i class="fa-solid fa-circle-exclamation mr-1.5"></i> <?php echo $error; ?>
             </div>
         <?php endif; ?>
 
@@ -123,10 +125,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
             
             <div>
-                <label class="block text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-2">Email Address</label>
+                <label class="block text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-2">Email or Username</label>
                 <div class="relative">
-                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-neutral-500"><i class="fa-regular fa-envelope"></i></span>
-                    <input type="email" name="email" required placeholder="chawaisdev92@gmail.com" 
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-neutral-500"><i class="fa-regular fa-user"></i></span>
+                    <input type="text" name="login_id" required placeholder="admin or email@example.com" 
                            class="w-full pl-10 pr-4 py-3 bg-neutral-900 border border-neutral-800 rounded-lg text-white text-sm focus:outline-none focus:border-accent transition">
                 </div>
             </div>
