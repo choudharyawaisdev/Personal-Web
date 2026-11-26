@@ -213,6 +213,84 @@ if (isset($_POST['install'])) {
                 null,
                 null
             ]);
+            $insert_proj->execute([
+                'CloudVault - Secure Client Portal & Document Manager',
+                'Object-oriented Core PHP client portal for encrypted document sharing, role-based folder permissions, storage quota tracking, and detailed audit logs.',
+                'cloudvault-php-portal.png',
+                'PHP',
+                'Core PHP, OOP, PDO MySQL, Tailwind CSS',
+                null,
+                null
+            ]);
+            $insert_proj->execute([
+                'SchoolSync - School Fee & Attendance Management System',
+                'Complete academic administration system in Core PHP featuring daily attendance tracking, automated monthly fee vouchers, PDF receipts, and parent notifications.',
+                'schoolsync-php-system.png',
+                'PHP',
+                'Core PHP, MySQL, AJAX, FPDF',
+                null,
+                null
+            ]);
+
+            // More Laravel Projects
+            $insert_proj->execute([
+                'BookingPro - Hotel & Resort Reservation Engine',
+                'Scalable Laravel booking engine with real-time room availability calendars, seasonal pricing rules, Stripe payment integration, and occupancy revenue reports.',
+                'bookingpro-laravel-app.png',
+                'Laravel',
+                'PHP, Laravel, MySQL, Stripe API',
+                null,
+                null
+            ]);
+            $insert_proj->execute([
+                'LogiTrack - Fleet & Courier Tracking System',
+                'End-to-end Laravel logistics & courier platform with live shipment status tracking, driver dispatch assignment, route optimization, and delivery proof capture.',
+                'logitrack-laravel-system.png',
+                'Laravel',
+                'PHP, Laravel, MySQL, REST APIs',
+                null,
+                null
+            ]);
+
+            // Custom Website Projects
+            $insert_proj->execute([
+                'FinEdge - Corporate FinTech & SaaS Website',
+                'Bespoke corporate FinTech web application featuring interactive ROI calculators, live financial analytics charts, responsive UI, and high-converting lead capture.',
+                'finedge-corporate-website.png',
+                'Custom Website',
+                'HTML5, Tailwind CSS, JavaScript, PHP, MySQL',
+                null,
+                null
+            ]);
+            $insert_proj->execute([
+                'LuxEstate - Real Estate Property Portal',
+                'Custom-built luxury real estate listing platform with advanced property filtering, interactive map integration, agent dashboards, and inquiry management.',
+                'luxestate-real-estate-portal.png',
+                'Custom Website',
+                'Custom PHP, MySQL, Tailwind CSS, AJAX',
+                null,
+                null
+            ]);
+
+            // Software Projects
+            $insert_proj->execute([
+                'MedCare - Clinic & Hospital Management Software',
+                'Comprehensive healthcare management software covering patient appointments, electronic medical records (EMR), doctor schedules, lab reports, and automated billing.',
+                'medcare-hospital-software.png',
+                'Software',
+                'PHP, MySQL, Bootstrap 5, Chart.js',
+                null,
+                null
+            ]);
+            $insert_proj->execute([
+                'LeadFlow - Enterprise CRM & Sales Pipeline Software',
+                'Full-featured CRM software with drag-and-drop Kanban deal pipelines, automated follow-up reminders, team performance analytics, and client activity timelines.',
+                'leadflow-crm-software.png',
+                'Software',
+                'Laravel, Vue.js, MySQL, REST APIs',
+                null,
+                null
+            ]);
         }
 
         // Insert initial blogs if empty

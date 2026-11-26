@@ -39,6 +39,12 @@ if ($pdo) {
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="Laravel">
                 Laravel
             </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="Custom Website">
+                Custom Website
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="Software">
+                Software
+            </button>
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-outline-custom transition duration-200" data-filter="WordPress">
                 WordPress
             </button>
