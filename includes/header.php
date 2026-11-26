@@ -89,7 +89,7 @@ $active_page = isset($active_page) ? $active_page : 'home';
     <!-- Navigation Header -->
     <nav id="main-nav" class="fixed top-0 left-0 w-full z-40 py-4 transition-all duration-300">
         <div class="container mx-auto px-4 md:px-8 flex items-center justify-between">
-            <a href="index.php" class="flex items-center gap-3 no-underline text-white">
+            <a href="./" class="flex items-center gap-3 no-underline text-white">
                 <?php if ($site_logo && file_exists('uploads/' . $site_logo)): ?>
                     <img src="uploads/<?php echo htmlspecialchars($site_logo); ?>" alt="Logo" class="h-10 w-auto rounded-lg">
                 <?php else: ?>
@@ -102,18 +102,18 @@ $active_page = isset($active_page) ? $active_page : 'home';
 
             <!-- Desktop Menu -->
             <div id="desktop-menu" class="hidden md:flex items-center gap-8 font-inter text-sm font-medium">
-                <a href="index.php" data-nav="home" class="nav-custom-link <?php echo $active_page === 'home' ? 'active text-accent' : 'text-neutral-400 hover:text-white'; ?> transition duration-200 no-underline">Home</a>
-                <a href="about.php" data-nav="about" class="nav-custom-link <?php echo $active_page === 'about' ? 'active text-accent' : 'text-neutral-400 hover:text-white'; ?> transition duration-200 no-underline">About</a>
-                <a href="index.php#services" data-nav="services" class="nav-custom-link text-neutral-400 hover:text-white transition duration-200 no-underline">Services</a>
-                <a href="index.php#technologies" data-nav="technologies" class="nav-custom-link text-neutral-400 hover:text-white transition duration-200 no-underline">Technologies</a>
-                <a href="portfolio.php" data-nav="portfolio" class="nav-custom-link <?php echo $active_page === 'portfolio' ? 'active text-accent' : 'text-neutral-400 hover:text-white'; ?> transition duration-200 no-underline">Projects</a>
-                <a href="contact.php" data-nav="contact" class="nav-custom-link <?php echo $active_page === 'contact' ? 'active text-accent' : 'text-neutral-400 hover:text-white'; ?> transition duration-200 no-underline">Contact</a>
+                <a href="./" data-nav="home" class="nav-custom-link <?php echo $active_page === 'home' ? 'active text-accent' : 'text-neutral-400 hover:text-white'; ?> transition duration-200 no-underline">Home</a>
+                <a href="about" data-nav="about" class="nav-custom-link <?php echo $active_page === 'about' ? 'active text-accent' : 'text-neutral-400 hover:text-white'; ?> transition duration-200 no-underline">About</a>
+                <a href="./#services" data-nav="services" class="nav-custom-link text-neutral-400 hover:text-white transition duration-200 no-underline">Services</a>
+                <a href="./#technologies" data-nav="technologies" class="nav-custom-link text-neutral-400 hover:text-white transition duration-200 no-underline">Technologies</a>
+                <a href="portfolio" data-nav="portfolio" class="nav-custom-link <?php echo $active_page === 'portfolio' ? 'active text-accent' : 'text-neutral-400 hover:text-white'; ?> transition duration-200 no-underline">Projects</a>
+                <a href="contact" data-nav="contact" class="nav-custom-link <?php echo $active_page === 'contact' ? 'active text-accent' : 'text-neutral-400 hover:text-white'; ?> transition duration-200 no-underline">Contact</a>
             </div>
 
             <!-- Header Action Elements -->
             <div class="flex items-center gap-4">
                 <!-- CTA Contact button -->
-                <a href="contact.php" class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-accent to-orange-600 hover:shadow-[0_0_15px_rgba(255,106,0,0.4)] transition duration-300 no-underline">
+                <a href="contact" class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-accent to-orange-600 hover:shadow-[0_0_15px_rgba(255,106,0,0.4)] transition duration-300 no-underline">
                     Hire Me
                 </a>
 
@@ -126,13 +126,13 @@ $active_page = isset($active_page) ? $active_page : 'home';
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden fixed inset-x-0 top-[72px] bg-darkbg border-b border-neutral-900 px-6 py-8 flex flex-col gap-6 font-inter text-base font-semibold shadow-2xl transition duration-300">
-            <a href="index.php" data-nav="home" class="no-underline <?php echo $active_page === 'home' ? 'text-accent' : 'text-neutral-400'; ?> hover:text-white py-2">Home</a>
-            <a href="about.php" data-nav="about" class="no-underline <?php echo $active_page === 'about' ? 'text-accent' : 'text-neutral-400'; ?> hover:text-white py-2">About</a>
-            <a href="index.php#services" data-nav="services" class="no-underline text-neutral-400 hover:text-white py-2">Services</a>
-            <a href="index.php#technologies" data-nav="technologies" class="no-underline text-neutral-400 hover:text-white py-2">Technologies</a>
-            <a href="portfolio.php" data-nav="portfolio" class="no-underline <?php echo $active_page === 'portfolio' ? 'text-accent' : 'text-neutral-400'; ?> hover:text-white py-2">Projects</a>
-            <a href="contact.php" data-nav="contact" class="no-underline <?php echo $active_page === 'contact' ? 'text-accent' : 'text-neutral-400'; ?> hover:text-white py-2">Contact</a>
-            <a href="contact.php" class="text-center bg-gradient-to-r from-accent to-orange-600 text-white py-3 rounded-xl hover:shadow-[0_0_15px_rgba(255,106,0,0.4)] transition duration-200 mt-4 no-underline">
+            <a href="./" data-nav="home" class="no-underline <?php echo $active_page === 'home' ? 'text-accent' : 'text-neutral-400'; ?> hover:text-white py-2">Home</a>
+            <a href="about" data-nav="about" class="no-underline <?php echo $active_page === 'about' ? 'text-accent' : 'text-neutral-400'; ?> hover:text-white py-2">About</a>
+            <a href="./#services" data-nav="services" class="no-underline text-neutral-400 hover:text-white py-2">Services</a>
+            <a href="./#technologies" data-nav="technologies" class="no-underline text-neutral-400 hover:text-white py-2">Technologies</a>
+            <a href="portfolio" data-nav="portfolio" class="no-underline <?php echo $active_page === 'portfolio' ? 'text-accent' : 'text-neutral-400'; ?> hover:text-white py-2">Projects</a>
+            <a href="contact" data-nav="contact" class="no-underline <?php echo $active_page === 'contact' ? 'text-accent' : 'text-neutral-400'; ?> hover:text-white py-2">Contact</a>
+            <a href="contact" class="text-center bg-gradient-to-r from-accent to-orange-600 text-white py-3 rounded-xl hover:shadow-[0_0_15px_rgba(255,106,0,0.4)] transition duration-200 mt-4 no-underline">
                 Hire Me
             </a>
         </div>

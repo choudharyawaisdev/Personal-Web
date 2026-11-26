@@ -53,12 +53,12 @@ $gh_link = !empty($site_settings['github']) ? $site_settings['github'] : 'https:
                 <div class="col-lg-3 col-md-6">
                     <h4 class="font-outfit text-white font-semibold text-base tracking-wider uppercase mb-4">Navigation</h4>
                     <ul class="list-unstyled space-y-2.5 text-sm">
-                        <li><a href="index.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Home</a></li>
-                        <li><a href="about.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> About</a></li>
-                        <li><a href="index.php#services" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Services</a></li>
-                        <li><a href="index.php#technologies" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Technologies</a></li>
-                        <li><a href="portfolio.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Projects</a></li>
-                        <li><a href="contact.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Contact</a></li>
+                        <li><a href="./" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Home</a></li>
+                        <li><a href="about" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> About</a></li>
+                        <li><a href="./#services" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Services</a></li>
+                        <li><a href="./#technologies" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Technologies</a></li>
+                        <li><a href="portfolio" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Projects</a></li>
+                        <li><a href="contact" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Contact</a></li>
                     </ul>
                 </div>
 
@@ -66,9 +66,9 @@ $gh_link = !empty($site_settings['github']) ? $site_settings['github'] : 'https:
                 <div class="col-lg-4 col-md-6">
                     <h4 class="font-outfit text-white font-semibold text-base tracking-wider uppercase mb-4">Legal & Policies</h4>
                     <ul class="list-unstyled space-y-2.5 text-sm mb-6">
-                        <li><a href="terms.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Terms & Services</a></li>
-                        <li><a href="terms.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Privacy Policy</a></li>
-                        <li><a href="contact.php" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Get in Touch</a></li>
+                        <li><a href="terms" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Terms & Services</a></li>
+                        <li><a href="terms" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Privacy Policy</a></li>
+                        <li><a href="contact" class="no-underline text-neutral-400 hover:text-accent transition duration-200 flex items-center gap-2.5 group"><i class="fa-solid fa-arrow-right text-[11px] text-accent transition group-hover:translate-x-1"></i> Get in Touch</a></li>
                     </ul>
                 </div>
             </div>
@@ -77,9 +77,9 @@ $gh_link = !empty($site_settings['github']) ? $site_settings['github'] : 'https:
             <div class="border-t border-neutral-900/60 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
                 <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($site_name); ?>. All rights reserved.</p>
                 <div class="flex gap-4">
-                    <a href="terms.php" class="no-underline text-neutral-500 hover:text-neutral-300">Privacy Policy</a>
+                    <a href="terms" class="no-underline text-neutral-500 hover:text-neutral-300">Privacy Policy</a>
                     <span class="text-neutral-800">|</span>
-                    <a href="terms.php" class="no-underline text-neutral-500 hover:text-neutral-300">Terms of Use</a>
+                    <a href="terms" class="no-underline text-neutral-500 hover:text-neutral-300">Terms of Use</a>
                 </div>
             </div>
         </div>

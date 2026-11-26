@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function syncActiveNav() {
         const hash = window.location.hash;
         const path = window.location.pathname.toLowerCase();
-        const isHomePage = path.endsWith('index.php') || path.endsWith('/') || path.split('/').pop() === '';
+        const isHomePage = path.endsWith('index.php') || path.endsWith('index') || path.endsWith('/') || path.split('/').pop() === '';
 
         if (isHomePage) {
             if (hash === '#services') {
@@ -104,11 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 setActiveNav('home');
             }
-        } else if (path.includes('about.php')) {
+        } else if (path.includes('about')) {
             setActiveNav('about');
-        } else if (path.includes('portfolio.php')) {
+        } else if (path.includes('portfolio')) {
             setActiveNav('portfolio');
-        } else if (path.includes('contact.php')) {
+        } else if (path.includes('contact')) {
             setActiveNav('contact');
         }
     }

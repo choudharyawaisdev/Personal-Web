@@ -35,7 +35,7 @@ require_once 'includes/header.php';
         
         <div class="container mx-auto px-4 md:px-8 max-w-4xl relative z-10">
             <!-- Back to list -->
-            <a href="blog.php" class="inline-flex items-center gap-2 text-xs font-semibold text-neutral-400 hover:text-accent no-underline mb-8 transition">
+            <a href="blog" class="inline-flex items-center gap-2 text-xs font-semibold text-neutral-400 hover:text-accent no-underline mb-8 transition">
                 <i class="fa-solid fa-arrow-left"></i> Back to Tech Blog
             </a>
             
@@ -148,7 +148,7 @@ require_once 'includes/header.php';
 
                                     <!-- Title -->
                                     <h3 class="text-lg font-bold font-outfit text-white mb-3 hover:text-accent transition duration-200">
-                                        <a href="blog.php?slug=<?php echo $post['slug']; ?>" class="no-underline text-white hover:text-accent">
+                                        <a href="blog/<?php echo urlencode($post['slug']); ?>" class="no-underline text-white hover:text-accent">
                                             <?php echo htmlspecialchars($post['title']); ?>
                                         </a>
                                     </h3>
@@ -160,7 +160,7 @@ require_once 'includes/header.php';
 
                                     <!-- Read More link -->
                                     <div class="pt-3 border-t border-neutral-900/80 mt-auto">
-                                        <a href="blog.php?slug=<?php echo $post['slug']; ?>" class="text-xs text-accent hover:text-orange-400 font-semibold flex items-center gap-1.5 no-underline transition">
+                                        <a href="blog/<?php echo urlencode($post['slug']); ?>" class="text-xs text-accent hover:text-orange-400 font-semibold flex items-center gap-1.5 no-underline transition">
                                             Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
                                         </a>
                                     </div>

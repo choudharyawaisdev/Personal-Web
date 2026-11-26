@@ -232,7 +232,7 @@ if ($pdo) {
                 <h2 class="text-3xl sm:text-4xl font-bold font-outfit mb-3">Featured Projects</h2>
                 <p class="text-neutral-400 text-sm sm:text-base">Production web applications, database architectures, and custom solutions.</p>
             </div>
-            <a href="portfolio.php" class="text-sm font-semibold text-accent hover:text-orange-400 transition mt-4 sm:mt-0 no-underline">
+            <a href="portfolio" class="text-sm font-semibold text-accent hover:text-orange-400 transition mt-4 sm:mt-0 no-underline">
                 Explore All Projects <i class="fa-solid fa-arrow-right-long ml-2 text-xs"></i>
             </a>
         </div>
@@ -388,7 +388,7 @@ if ($pdo) {
     <div class="container mx-auto px-4 md:px-8 text-center relative z-10 fade-in-scroll">
         <h2 class="text-3xl sm:text-5xl font-bold font-outfit mb-4">Let's build something scalable & secure together</h2>
         <p class="text-neutral-400 max-w-xl mx-auto mb-8 text-sm sm:text-base">Need a custom PHP web application, Laravel API, MySQL database optimization, or WordPress website? Let's connect.</p>
-        <a href="contact.php" class="px-8 py-4 rounded-xl text-base font-semibold text-white btn-glow no-underline inline-flex items-center gap-3">
+        <a href="contact" class="px-8 py-4 rounded-xl text-base font-semibold text-white btn-glow no-underline inline-flex items-center gap-3">
             Hire Me <i class="fa-solid fa-paper-plane text-sm"></i>
         </a>
     </div>
