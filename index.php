@@ -44,10 +44,10 @@ if ($pdo) {
                 </p>
                 
                 <div class="flex flex-wrap items-center justify-center justify-content-lg-start gap-4">
-                    <a href="portfolio.php" class="px-6 py-3.5 rounded-xl text-sm font-semibold text-white btn-glow no-underline">
+                    <a href="portfolio" class="px-6 py-3.5 rounded-xl text-sm font-semibold text-white btn-glow no-underline">
                         View My Work <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
-                    <a href="contact.php" class="px-6 py-3.5 rounded-xl text-sm font-semibold btn-outline-custom no-underline">
+                    <a href="contact" class="px-6 py-3.5 rounded-xl text-sm font-semibold btn-outline-custom no-underline">
                         Hire Me
                     </a>
                 </div>

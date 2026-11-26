@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('hashchange', syncActiveNav);
     window.addEventListener('scroll', () => {
         const path = window.location.pathname.toLowerCase();
-        if (path.endsWith('index.php') || path.endsWith('/') || path.split('/').pop() === '') {
+        if (path.endsWith('index.php') || path.endsWith('index') || path.endsWith('/') || path.split('/').pop() === '') {
             syncActiveNav();
         }
     }, { passive: true });
